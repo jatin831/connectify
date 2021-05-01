@@ -1,0 +1,120 @@
+.Modal {
+    position: absolute;
+    background-color: #212727;
+    box-shadow: 0 -2px 10px rgba(10, 10, 10, 1);
+    color: white;
+    z-index: 100;
+    top: 100px;
+    left: 50%;
+    width: 400px;
+    transform: translateX(-50%) translateY(0);
+}
+
+.Modal_Show {
+    animation: modalShow 0.4s ease-out;
+}
+
+@keyframes modalShow {
+    0% {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.Modal_Close {
+    animation: modalClose 0.3s ease-in;
+}
+
+@keyframes modalClose {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.Modal.active {
+    transform: translateX(-50%) translateY(0);
+}
+
+.Modal_Header {
+    display: flex;
+    border-bottom: 1px solid gray;
+    font-size: 10px;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.Modal_Header > h1 {
+    font-size: 24px;
+    flex: 1;
+}
+
+.Modal_Header > .MuiButtonBase-root {
+    height: 25px;
+    width: 25px;
+}
+
+.Modal_Header .MuiSvgIcon-root {
+    height: 18px !important;
+    width: 18px !important;
+}
+
+.Modal_Body {
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.Modal_Footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    border-top: 1px solid gray;
+}
+
+.Modal_Footer > .MuiButtonBase-root {
+    margin: 0 5px;
+}
+
+.Modal_Footer > .MuiButtonBase-root:first-child {
+    margin: 0 5px;
+    background-color: red !important;
+    color: white !important;
+}
+
+.Modal_Footer > .MuiButtonBase-root:last-child {
+    margin: 0 5px;
+    background-color: #0275d8 !important;
+    color: white !important;
+}
+
+.Modal input {
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 95%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none !important;
+    outline: none !important;
+    background-color: white;
+}
+
+.Modal input[type=file] {
+    width: 100%;
+    background-color: transparent;
+}
+
+@media (max-width: 450px) {
+    .Modal {
+        width: 300px;
+    }
+}

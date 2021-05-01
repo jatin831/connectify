@@ -1,0 +1,37 @@
+.Admin {
+    flex: 0.70;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Admin_Body {
+    padding: 0 20px;
+    margin-top: -200px;
+    text-align: center;
+}
+
+.Admin_Body > img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.Admin_Body > h1 {
+    font-size: 36px;
+}
+
+.Admin_Body > p {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.Admin_Body > p > span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(182, 181, 181);
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 6px;
+}

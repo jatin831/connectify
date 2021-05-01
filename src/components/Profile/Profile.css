@@ -1,0 +1,91 @@
+.Profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #1f2021;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px 10px 10px 10px;
+}
+
+@keyframes showProfile {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.Profile_Show {
+    transform: translateX(0);
+    animation: showProfile 0.3s ease-out forwards;
+}
+
+@keyframes closeProfile {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.Profile_Close {
+    transform: translateX(0);
+    animation: closeProfile 0.3s ease-out forwards;
+}
+
+.Profile_Header {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.Profile_Header > .MuiButtonBase-root {
+    height: 30px;
+    width: 30px;
+    margin-top: -2px;
+    margin-right: 8px;
+}
+
+.Profile_Body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Profile_Body > .MuiAvatar-root {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.Profile_Body > h1 {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.Profile_Body h4 {
+    margin-top: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.Profile_Details {
+    box-sizing: border-box;
+    
+    padding: 0 30px;
+}

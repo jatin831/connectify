@@ -1,0 +1,101 @@
+.Chat {
+    display: flex;
+    flex-direction: column;
+    min-width: 360px !important;
+    flex: 0.70;
+    position: relative;
+}
+
+.Chat_Body {
+    padding: 30px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Chat_Header {
+    padding: 10px 10px 10px 20px;
+    background-color: #323536;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Chat_HeaderInfo {
+    display: flex;
+}
+
+.Chat_Info {
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+.Chat_Info > p {
+    font-size: 12px;
+    margin-top: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .Chat_Info > h3 {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.Chat_Footer {
+    background-color: #323536;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.Chat_Footer > .MuiSvgIcon-root {
+    font-size: 28px !important;
+    color: gray !important;
+}
+
+/* .Chat_Footer .MuiButtonBase-root:first-child .MuiSvgIcon-root {
+    transform: rotateZ(34deg);
+} */
+
+.Chat_Footer > form {
+    display: flex;
+    flex: 1;
+}
+
+.Chat_Footer > form > input {
+    flex: 1;
+    margin: 0 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #252424;
+    color: white;
+    border: none !important;
+    outline: none !important;
+}
+
+.Chat_Footer > form > button {
+    display: none;
+}
+
+.Chat .MuiMenu-paper {
+    transform: translateX(-65%) translateY(25%) !important;
+    background-color: #2a2f32 !important;
+    color: white !important;
+}
+
+.Chat_Body .MuiCircularProgress-root {
+    display: block;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+@media (max-width: 576px) {
+    .Chat_Body {
+        padding: 10px;
+        padding-top: 30px;
+    }
+}

@@ -1,0 +1,89 @@
+.Message {
+    position: relative;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: #2A2F32;
+    font-family: 'Roboto';
+    max-width: 60%;
+}
+
+.Message_Author {
+    position: absolute;
+    top: -15px;
+    font-weight: 700;
+    font-size: x-small;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis;
+    overflow: hidden; */
+}
+
+.Message_Time {
+    margin-left: 10px;
+    font-size: xx-small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.Message_TimeVideo {
+    margin-left: 80%;
+    margin-top: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    font-size: xx-small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.Message_Received {
+    margin-left: auto;
+    background-color: #056162;
+}
+
+.ImgMessage {
+    padding: 4px;
+}
+
+.VideoMessage {
+    padding: 7px 5px 12px 5px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.Message  video {
+    border-radius: 3px !important;
+    margin: 0 !important;
+}
+
+.Message img {
+    width: 350px;
+    height: 280px;
+    display: block;
+    border-radius: 5px;
+}
+
+.PlayerWrapper {
+    width: 380px;
+    height: auto;
+    margin: 0;
+}
+
+@media (max-width: 836px) {
+    .Message {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .PlayerWrapper {
+        width: 250px;
+    }
+
+    .Message img {
+        width: 250px;
+        height: 200px;
+    }
+}

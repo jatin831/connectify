@@ -1,0 +1,91 @@
+.Sidebar {
+    flex: 0.30;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 10 !important;
+}
+
+.Sidebar_Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    background-color: #323536;
+}
+
+.MuiSvgIcon-root {
+    font-size: 24px !important;
+    color: white;
+}
+
+.MuiAvatar-root:hover  {
+    cursor: pointer !important;
+}
+
+.Sidebar_HeaderInfo {
+    display: flex;
+    align-items: center;
+}
+
+.Sidebar_HeaderInfo h3 {
+    margin-left: 10px;
+}
+
+.MuiMenu-paper {
+    transform: translateX(-65%) translateY(25%) !important;
+    background-color: #2a2f32 !important;
+    color: white !important;
+}
+
+.MuiListItem-root {
+    font-size: 14px !important;
+}
+
+.Sidebar_SearchContainer {
+    display: flex;
+    align-items: center;
+    background-color: rgb(37 36 36);
+    height: 39px;
+    padding: 0 5px;
+}
+
+.Sidebar_SearchContainer .MuiSvgIcon-root {
+    color: rgb(108 113 116) !important;
+}
+
+.Sidebar_SearchContainer > input {
+    background-color: inherit;
+    color: white;
+    border: none;
+    font-size: 14px;
+}
+
+.Sidebar_SearchContainer > input:focus {
+    outline: none;
+}
+
+.Sidebar_Chat {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 10px; */
+}
+
+.Sidebar_Chat .MuiCircularProgress-root {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+@media (max-width: 620px) {
+    .MuiMenu-paper {
+        transform: none !important;
+        padding: 0 !important;
+    }
+    .MuiListItem-root  {
+        height: 35px !important;
+    }
+}
+
