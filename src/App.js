@@ -38,23 +38,23 @@ const App = () => {
     }
   }, [userData]);
 
-  let displayOutput = null;
-  if (loading) {
-    displayOutput = <CircularProgress />
-  } else if (userData.token) {
-    displayOutput = (
-      <div className="App_Body">
-        <Sidebar update={update} />
-        <Switch>
-          <Route path="/user/:userId" exact component={Chat} />
-          <Route path="/room/:roomId" exact component={Chat} />
-          <Route path="/" exact component={AdminChat} />
-        </Switch>
-      </div>
-    )
-  } else {
-    displayOutput = <Login />;
-  }
+  // let displayOutput = null;
+  // if (loading) {
+  //   displayOutput = <CircularProgress />
+  // } else if (userData.token) {
+  //   displayOutput = (
+  //     <div className="App_Body">
+  //       <Sidebar update={update} />
+  //       <Switch>
+  //         <Route path="/user/:userId" exact component={Chat} />
+  //         <Route path="/room/:roomId" exact component={Chat} />
+  //         <Route path="/" exact component={AdminChat} />
+  //       </Switch>
+  //     </div>
+  //   )
+  // } else {
+  //   displayOutput = <Login />;
+  // }
 
   return (
     <div className="App">

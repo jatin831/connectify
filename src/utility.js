@@ -25,6 +25,6 @@ export const isUserOnline = (timestamp) => {
     // console.log(d1.getFullYear(), d2.getFullYear());
     const diffMs = d2 - d1;
     // console.log(diffMs);
-    // if difference less than 2 minutes than user is online
+    // if difference less than 2 minutes then user is online
     return diffMs < 2 * 60 * 1000;
 }

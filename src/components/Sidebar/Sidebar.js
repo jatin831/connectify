@@ -81,7 +81,7 @@ const Sidebar = ({update}) => {
                             } else if (response.type === "img") {
                                 lastMessage = "--Image--";
                             } else if (response.type === "video") {
-                                lastMessage = "--Video";
+                                lastMessage = "--Video--";
                             }
                         }
                         return {
@@ -142,7 +142,7 @@ const Sidebar = ({update}) => {
                             } else if (response.type === "img") {
                                 lastMessage = "--Image--";
                             } else if (response.type === "video") {
-                                lastMessage = "--Video";
+                                lastMessage = "--Video--";
                             }
                         }
                         
@@ -182,7 +182,7 @@ const Sidebar = ({update}) => {
             setShowError("Invalid userID");
             return;
         }
-        contacts.doc(userId).onSnapshot(snapshot => {
+        contacts.doc(userId).get().then(snapshot => {
             if (snapshot.exists) {
                 contacts.doc(userId).collection("contactList").doc(userData.userId).set({});
                 contacts.doc(userData.userId).collection("contactList").doc(userId).set({});

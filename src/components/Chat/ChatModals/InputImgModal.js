@@ -16,14 +16,11 @@ const InputImgModal = ({show, closeModal, sendImgHandler}) => {
 
     return (
         <Modal buttonName="Send" addClickHandler={sendImg} title="Select Image" show={show} closeModal={closeModal}>
-            {/* <p>{img.name || "Select an image"} */}
                 <input
                     id="hide"
-                    // value={img.name} 
                     accept=".jpg, .png., .jpeg, .PNG"
                     onChange={handleImageFile}  
                     type="file" />
-            {/* </p> */}
         </Modal>
     )
 }

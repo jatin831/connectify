@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Message from './Message/Message';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectUserData } from '../../reducers/authSlice';
 import db, { storage } from '../../firebase';
@@ -29,7 +29,8 @@ const calcMessageHashKey = (s1, s2) => {
 }
 
 const Chat = () => {
-    
+    const params = useParams();
+    console.log(params);
     const senderUserId = useParams().userId;
     const roomId = useParams().roomId;
     const [messages, setMessages] = useState([]);
@@ -87,7 +88,7 @@ const Chat = () => {
     }
 
     const getRoomInfo = () => {
-        db.collection("rooms").doc(roomId).onSnapshot(snapshot => {
+        db.collection("rooms").doc(roomId).get().then(snapshot => {
             setChatData({
                 roomName: snapshot.data().roomName,
                 roomId: snapshot.id,
@@ -127,7 +128,7 @@ const Chat = () => {
     }
 
     useEffect(() => {
-        if (window.location.pathname.slice(6) == roomId)
+        if (params.userId == roomId)
         {
             scrollToBottom();
         }
